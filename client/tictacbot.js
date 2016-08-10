@@ -56,6 +56,7 @@ module.exports = (state) => {
 		return row.map((col, colIdx) => ({type: col, row: rowIdx, col: colIdx}))
 	})
 	var flattenArray = [].concat.apply([], randomState).filter((e) => e.type === '')
+	if (flattenArray.length === 0) return {row: -1, col: -1}
 	var selectedRowCol = flattenArray[Math.floor(Math.random() * flattenArray.length)]
 	return {row: selectedRowCol.row, col: selectedRowCol.col}
 }
