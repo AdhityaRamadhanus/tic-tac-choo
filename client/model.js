@@ -12,7 +12,7 @@ module.exports = () => {
 			setSquare: (data, state) => {
 				const newBoard = state.board.slice()
 				if (newBoard[data.row][data.col] !== '') {
-					console.log('already there ' + data.row + ' ' + data.col)
+					//console.log('already there ' + data.row + ' ' + data.col)
 					return state
 				}
       	newBoard[data.row][data.col] = data.type
@@ -23,8 +23,8 @@ module.exports = () => {
 			computeMove: (data, state, send, done) => {
 				send('setSquare', data, () => {
 					var computerMove = robot(state.board)
-					console.log(JSON.stringify(state))
-					console.log(JSON.stringify(computerMove))
+					//console.log(JSON.stringify(state))
+					//console.log(JSON.stringify(computerMove))
 					send('setSquare', {type: 'o', row: computerMove.row, col: computerMove.col}, done)
 				})
 			}
