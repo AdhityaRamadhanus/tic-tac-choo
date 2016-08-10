@@ -1,18 +1,21 @@
 {
   "name": "tic-tac-choo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Tic-tac-toe using expressjs and choo",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "browserify client/app.js -o dist/app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "Choo",
+    "Choojs",
+    "Expressjs",
+    "NodeJs"
+  ],
+  "author": "Adhitya Ramadhanus",
+  "license": "MIT",
   "dependencies": {
     "choo": "^3.2.0",
-    "express": "^4.14.0",
-    "xtend": "^4.0.1"
+    "express": "^4.14.0"
   }
 }
