@@ -1,22 +1,20 @@
+'use strict'
+var describe = require('mocha').describe
+var it = require('mocha').it
+require('should')
 var ticbot = require('../client/tictacbot')
 
-var emptyState = [ 
-	['', '', ''],
-	['', '', ''],
-	['', '', '']
-]
-var testState1 = [ 
-	['', '', ''],
-	['', 'o', ''],
-	['', 'x', '']
-]
-var testState2 = [ 
-	['', '', ''],
-	['x', 'o', 'o'],
-	['', 'x', '']
-]
 
-
-console.log(ticbot(emptyState))
-console.log(ticbot(testState1))
-console.log(ticbot(testState2))
+describe('Tic-tac-toe Bot', function () {
+  it('Test on state 1', function (done) {
+    var state = [ 
+			['', '', ''],
+			['', '', ''],
+			['', '', '']
+		]
+		var computerMove = ticbot(state)
+		computerMove.row.should.equal(1)
+		computerMove.col.should.equal(1)
+		done()
+  })
+})
