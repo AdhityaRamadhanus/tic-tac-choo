@@ -4,6 +4,7 @@
   "description": "Tic-tac-toe using expressjs and choo",
   "main": "server.js",
   "scripts": {
+    "test": "node_modules/.bin/mocha --timeout=15000",
     "compile": "browserify client/app.js -o dist/app.js"
   },
   "keywords": [
@@ -17,5 +18,9 @@
   "dependencies": {
     "choo": "^3.2.0",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "should": "^11.0.0"
   }
 }
